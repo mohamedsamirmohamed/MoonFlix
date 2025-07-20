@@ -1,0 +1,308 @@
+.thil {
+  padding: 20px;
+  background-color: #000;
+  color: white;
+}
+
+.heroSection {
+  position: relative;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-30%);
+  left: 0;
+  right: 0;
+  padding: 0 2rem;
+  color: white;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  max-width: 100%;
+}
+
+.badges {
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge-pill {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.badge-number {
+  background-color: #e50914;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.fs6 {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+@media (max-width: 992px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+    transform: translateY(-20%);
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    transform: translateY(-10%);
+  }
+
+  .badges {
+    justify-content: center;
+  }
+}
+
+
+
+.btn-watch {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.btn-watch:hover {
+  background-color: #b20710;
+}
+
+.moviesTitle {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 30px 0 15px 10px;
+}
+
+.movieList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.movieCard {
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.movieCard:hover {
+  transform: scale(1.05);
+}
+
+.moviePoster {
+  width: 100%;
+  border-radius: 10px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.loadMore {
+  margin: 30px auto;
+  display: block;
+  padding: 12px 24px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loadMore:hover {
+  background-color: darkred;
+}
+
+.loadingContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: black;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid red;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+.loadingText {
+  color: white;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* أزرار التبويب */
+/* ستايل الزرار نفسه */
+.tabBtn {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 6px 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+}
+
+.tabBtn:hover {
+  background-color: white;
+  color: black;
+}
+
+.activeTabBtn {
+  background-color: #e50914;
+  border-color: #e50914;
+  color: white;
+}
+
+.movieCard h4 {
+  font-size: 14px; /* حجم أصغر */
+  font-weight: normal; /* لو عايز تخفف الوزن */
+}
+
+/* شاشات متوسطة (تابلت) */
+@media (max-width: 992px) {
+  .content {
+    grid-template-columns: 1fr; /* عمود واحد فقط */
+    text-align: center;
+    transform: translateY(-20%);
+  }
+
+  .heroSection {
+    height: 90vh;
+  }
+
+  .moviesTitle {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .movieCard {
+    width: 45%;
+  }
+}
+
+/* شاشات صغيرة (موبايل) */
+@media (max-width: 768px) {
+  .content {
+    padding: 0 1rem;
+    grid-template-columns: 1fr;
+    transform: translateY(-10%);
+  }
+
+  .heroSection {
+    height: 80vh;
+    align-items: flex-end;
+    padding-bottom: 30px;
+  }
+
+  .movieCard {
+    width: 80%;
+  }
+
+  .moviesTitle {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .btn-watch {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tabBtn,
+  .activeTabBtn {
+    width: 45%;
+    margin: 5px auto;
+    display: block;
+    text-align: center;
+  }
+}
+
+/* شاشات أصغر جداً */
+@media (max-width: 480px) {
+  .moviePoster {
+    height: 250px;
+  }
+
+  .movieCard h4 {
+    font-size: 12px;
+  }
+
+  .fs6 {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 2;
+  }
+
+  .moviesTitle {
+    font-size: 1.3rem;
+  }
+
+  .btn-watch {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+}

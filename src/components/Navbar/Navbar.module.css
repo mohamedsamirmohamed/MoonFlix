@@ -1,0 +1,163 @@
+/* src/components/Navbar/Navbar.module.css */
+
+/* Desktop Navbar Styles */
+.scrolledNav {
+  background-color: #000 !important;
+  transition: background-color 0.3s ease;
+}
+
+.transparentNav {
+  background-color: transparent !important;
+  transition: background-color 0.3s ease;
+}
+
+.logoWhite {
+  color: #fff;
+}
+
+.logoRed {
+  color: red;
+}
+
+.activeNav {
+  background-color: red;
+  color: white !important;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 2px solid red;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  border: none;
+  background: transparent;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100vh;
+  background: #1a1a1a;
+  z-index: 1050;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+}
+
+.sidebarOpen {
+  left: 0;
+}
+
+.sidebarHeader {
+  padding: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.sidebarTitle {
+  color: #fff;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.sidebarMenu {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.sidebarMenu li {
+  margin: 0;
+}
+
+.sidebarLink {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.sidebarLink:hover {
+  background-color: #333;
+  color: #fff;
+  border-left-color: red;
+}
+
+.activeLink {
+  background-color: red !important;
+  color: white !important;
+  border-left-color: #fff !important;
+}
+
+.sidebarIcon {
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.sidebarTheme {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+
+.themeTitle {
+  color: #fff;
+  margin: 0 0 15px 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.themeOption {
+  display: flex;
+  align-items: center;
+  color: #ccc;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.themeOption:hover {
+  color: #fff;
+}
+
+.moonIcon {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  body {
+    padding-left: 0;
+  }
+}
+
+/* Fix for mobile navbar */
+@media (max-width: 991px) {
+  .navbar-brand {
+    margin: 0 auto;
+  }
+}

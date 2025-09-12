@@ -89,4 +89,4 @@ src/
 This project is licensed under the [MIT License](LICENSE).
 
 ---
-Developed by [Live Demo](https://github.com/MohamedSamirMohamed)
+Developed by [Live Demo]([https://github.com/MohamedSamirMohamed](https://mohamedsamirmohamed.github.io/PowerZone-Gym/))

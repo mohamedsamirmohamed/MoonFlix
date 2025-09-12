@@ -87,4 +87,4 @@ src/
 
 ## License
 
-Developed by [Live Demo](https://mohamedsamirmohamed.github.io/PowerZone-Gym/)
+Developed by [Live Demo](https://mohamedsamirmohamed.github.io/MoonFlix/)

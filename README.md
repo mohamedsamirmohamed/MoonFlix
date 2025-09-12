@@ -86,7 +86,5 @@ src/
 5. Open a Pull Request
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
 
----
 Developed by [Live Demo](https://mohamedsamirmohamed.github.io/PowerZone-Gym/)
